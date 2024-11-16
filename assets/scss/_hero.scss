@@ -1,0 +1,173 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  
+
+  
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  p {
+    width: 80%;
+    animation-delay: 0.4s;
+    margin: 0 auto 30px auto;
+    color: #fff;
+  }
+
+ 
+
+  .btn-get-started {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    animation-delay: 0.8s;
+    border: 2px solid $primary;
+    &:hover {
+      background: $primary;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  
+  @media (min-width: 1024px) {
+    p {
+      width: 60%;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &::after {
+      width: 180%;
+      height: 95%;
+      border-radius: 0 0 50% 50%;
+      transform: translateX(-50%) rotate(0deg);
+    }
+  
+    &::before {
+        top: 0;
+        width: 180%;
+        height: 94%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50%) translateY(20px) rotate(4deg);
+    }
+  }
+
+  @media (max-width: 575px) {
+    h2 {
+      font-size: 30px;
+    }
+
+    &::after {
+      left: 40%;
+      top: 0;
+      width: 200%;
+      height: 95%;
+      border-radius: 0 0 50% 50%;
+      transform: translateX(-50%) rotate(0deg);
+    }
+  
+    &::before {
+        left: 50%;
+        top: 0;
+        width: 200%;
+        height: 94%;
+        border-radius: 0 0 50% 50%;
+        transform: translateX(-50%) translateY(20px) rotate(4deg);
+    }
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Hero No Slider Section
+--------------------------------------------------------------*/
+#hero-no-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/hero-bg.jpg") center top no-repeat;
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .btn-get-started {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    animation-delay: 0.8s;
+    border: 2px solid $primary;
+    &:hover {
+      background: $primary;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 575px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+}
